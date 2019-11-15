@@ -451,7 +451,7 @@ mysqli_close($link);
                                     <?php
                                                                 $link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "politecnico");
 
-                                                                $sql = "SELECT *  FROM   producto WHERE categoria = 1";
+                                                                $sql = "SELECT *  FROM   producto WHERE categoria = 2";
 
                                                                 if ($res = mysqli_query($link, $sql)) {
                                                                     if (mysqli_num_rows($res) > 0) {
@@ -505,6 +505,41 @@ mysqli_close($link);
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cake.png">
                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
                                     itaque. Nam.</p>
+                                    <?php
+                                                                                                    $link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "politecnico");
+
+                                                                                                    $sql = "SELECT *  FROM   producto WHERE categoria = 1";
+
+                                                                                                    if ($res = mysqli_query($link, $sql)) {
+                                                                                                        if (mysqli_num_rows($res) > 0) {
+                                                                                                            echo "<table>";
+                                                                                                            echo "<tr>";
+                                                                                                            echo "<th>id</th>";
+                                                                                                            echo "<br><br/>";
+                                                                                                            echo "<th>nombre</th>";
+                                                                                                            echo "<th>categoria</th>";
+                                                                                                            echo "<th>fechaingreso</th>";
+                                                                                                            echo "</tr>";
+                                                                                                            while ($row = mysqli_fetch_array($res)) {
+                                                                                                                echo "<tr>";
+                                                                                                                echo "<td>".$row['id']."</td>";
+                                                                                                                echo "<td>".$row['nombre']."</td>";
+                                                                                                                echo "<td>".$row['categoria']."</td>";
+                                                                                                                echo "<td>".$row['fechaingreso']."</td>";
+                                                                                                                echo "</tr>";
+                                                                                                            }
+                                                                                                            echo "</table>";
+                                                                                                        }
+                                                                                                        else {
+                                                                                                            echo "No matching records are found.";
+                                                                                                        }
+                                                                                                    }
+                                                                                                    else {
+                                                                                                        echo "ERROR: Could not able to execute $sql. "
+                                                                                                                                    .mysqli_error($link);
+                                                                                                    }
+                                                                                                    mysqli_close($link);
+                                                                                                    ?>
                             </div>
                         </div>
                     </div>
