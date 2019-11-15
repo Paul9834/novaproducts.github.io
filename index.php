@@ -482,11 +482,11 @@ mysqli_close($link);
                                                                                                 .mysqli_error($link);
                                                                 }
                                                                 mysqli_close($link);
-                                                                ?><
+                                                                ?>
                             </div>
 
                         </div>
-                        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
                     </div>
                 </div>
                 <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
