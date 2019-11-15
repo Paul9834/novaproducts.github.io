@@ -450,7 +450,7 @@ mysqli_close($link);
                             <?php
                             $link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "politecnico");
 
-                            $sql = "SELECT *  FROM producto categoria = 1";
+                            $sql = "SELECT *  FROM  WhERE producto categoria = 1";
 
                             if ($res = mysqli_query($link, $sql)) {
                                 if (mysqli_num_rows($res) > 0) {
