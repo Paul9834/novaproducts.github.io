@@ -430,6 +430,7 @@ mysqli_close($link);
             </div>
         </div>
     </footer>
+    <center>
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright ©&nbsp;ProyectoDB 2018</small></div>
     </div>
@@ -483,6 +484,7 @@ mysqli_close($link);
                             mysqli_close($link);
                             ?><
                         </div>
+                        </center>
                     </div>
                 </div>
                 <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
