@@ -98,31 +98,26 @@ th, td {
             </div>
         </div>
     </section>
-    <section id="productos en listado">
+    <section id="DATOS LABVIEW">
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary mb-0">productos en listado</h2>
 
 <?php 
-$link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "politecnico");  
+$link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "labview");
 
-$sql = "SELECT * FROM producto"; 
+$sql = "SELECT * FROM frequent_questions";
 
 if ($res = mysqli_query($link, $sql)) { 
     if (mysqli_num_rows($res) > 0) { 
         echo "<table>"; 
         echo "<tr>"; 
-        echo "<th>id</th>"; 
-        echo "<br><br/>";
-        echo "<th>nombre</th>"; 
-        echo "<th>categoria</th>"; 
-        echo "<th>fechaingreso</th>"; 
+        echo "<th>id</th>";
+        echo "<th>date</th>";
         echo "</tr>"; 
         while ($row = mysqli_fetch_array($res)) { 
             echo "<tr>"; 
             echo "<td>".$row['id']."</td>"; 
-            echo "<td>".$row['nombre']."</td>"; 
-            echo "<td>".$row['categoria']."</td>"; 
-            echo "<td>".$row['fechaingreso']."</td>"; 
+            echo "<td>".$row['title']."</td>";
             echo "</tr>"; 
         } 
         echo "</table>"; 
