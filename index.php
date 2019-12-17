@@ -47,13 +47,6 @@ th, td {
             </div>
         </div>
     </nav>
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container"><img class="img-fluid d-block mx-auto mb-5" data-aos="fade-down" src="assets/img/logo%20final.png" style="width: 779px;margin: -31px;padding: 20px;">
-            <h1></h1>
-            <hr class="star-light">
-            <h2 class="font-weight-light mb-0">Productos por venta de catálogo.</h2>
-        </div>
-    </header>
 
     <section id="DATOS LABVIEW">
         <div class="container">
