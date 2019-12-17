@@ -105,19 +105,21 @@ th, td {
 <?php 
 $link = mysqli_connect("35.199.40.228", "paul9834", "paul9834", "labview");
 
-$sql = "SELECT * FROM frequent_questions";
-
+$sql = "SELECT * FROM datos";
+ xxxxxx
 if ($res = mysqli_query($link, $sql)) { 
     if (mysqli_num_rows($res) > 0) { 
         echo "<table>"; 
         echo "<tr>"; 
         echo "<th>id</th>";
-        echo "<th>date</th>";
+        echo "<th>datos</th>";
+        echo "<th>fecha</th>";
         echo "</tr>"; 
         while ($row = mysqli_fetch_array($res)) { 
             echo "<tr>"; 
             echo "<td>".$row['id']."</td>"; 
-            echo "<td>".$row['title']."</td>";
+            echo "<td>".$row['dato']."</td>";
+            echo "<td>".$row['horadecreacion']."</td>";
             echo "</tr>"; 
         } 
         echo "</table>"; 
